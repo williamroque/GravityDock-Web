@@ -1,11 +1,11 @@
 {
-  "name": "@tracereactive/web",
+  "name": "@gravitydock/web",
   "version": "1.0.0",
-  "description": "TraceReactive Web package",
+  "description": "Gravity Dock Web package",
   "main": "dist/index.js",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=browser --format=iife --global-name=__TraceReactive_Package",
-    "build:trpkg": "npm run build && node scripts/build-trpkg.js",
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=browser --format=iife --global-name=__Gravity Dock_Package",
+    "build:gdpkg": "npm run build && node scripts/build-gdpkg.js",
     "dev": "npm run build -- --watch"
   },
   "dependencies": {
@@ -13,7 +13,7 @@
     "arquero": "^5.4.0"
   },
   "devDependencies": {
-    "@tracereactive/types": "file:../types",
+    "@gravitydock/types": "file:../types",
     "adm-zip": "^0.6.1",
     "esbuild": "^0.25.0",
     "typescript": "^5.7.3"

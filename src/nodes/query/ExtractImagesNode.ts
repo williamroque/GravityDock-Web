@@ -1,5 +1,5 @@
-import { BaseNode } from '@tracereactive/types';
-import type { InputDefinition, OutputDefinition, PropertyDefinition } from '@tracereactive/types';
+import { BaseNode } from '@gravitydock/types';
+import type { InputDefinition, OutputDefinition, PropertyDefinition } from '@gravitydock/types';
 import { WebQueryCategory } from '../../category';
 import { resolveUrl } from '../../utils/resolveUrl';
 import * as cheerio from 'cheerio';

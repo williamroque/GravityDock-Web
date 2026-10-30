@@ -1,5 +1,5 @@
-import { ExecuteNode } from '@tracereactive/types';
-import type { InputDefinition, OutputDefinition, PropertyDefinition } from '@tracereactive/types';
+import { ExecuteNode } from '@gravitydock/types';
+import type { InputDefinition, OutputDefinition, PropertyDefinition } from '@gravitydock/types';
 import { WebStructuredCategory } from '../../category';
 import * as cheerio from 'cheerio';
 import * as aq from 'arquero';

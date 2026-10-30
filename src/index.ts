@@ -8,9 +8,9 @@ import { HtmlTableToDataframeNode } from './nodes/structured/HtmlTableToDatafram
 import { SchemaScraperNode } from './nodes/structured/SchemaScraperNode';
 import { ExtractArticleNode } from './nodes/semantic/ExtractArticleNode';
 import { ExtractMetadataNode } from './nodes/semantic/ExtractMetadataNode';
-import type { TraceReactiveAPI } from '@tracereactive/types';
+import type { GravityDockAPI } from '@gravitydock/types';
 
-declare const traceReactive: TraceReactiveAPI;
+declare const gravityDock: GravityDockAPI;
 
 const nodes = [
     new FetchPageNode(),
@@ -38,7 +38,7 @@ const serializableNodes = nodes.map(n => ({
     dynamicOutputs: n.dynamicOutputs
 }));
 
-traceReactive.registerNodes(serializableNodes);
+gravityDock.registerNodes(serializableNodes);
 
 const deserialize = (obj: any): any => {
     if (!obj) return obj;
@@ -68,7 +68,7 @@ const serialize = (obj: any): any => {
     return obj;
 };
 
-traceReactive.onEvaluateNode(async ({ typeId, inputs, properties }: any) => {
+gravityDock.onEvaluateNode(async ({ typeId, inputs, properties }: any) => {
     const node = nodes.find(n => n.typeId === typeId);
     if (!node) throw new Error(`Unknown node type: ${typeId}`);
     const parsedInputs = deserialize(inputs);

@@ -1,5 +1,5 @@
-import { BaseNode } from '@tracereactive/types';
-import type { InputDefinition, OutputDefinition, PropertyDefinition } from '@tracereactive/types';
+import { BaseNode } from '@gravitydock/types';
+import type { InputDefinition, OutputDefinition, PropertyDefinition } from '@gravitydock/types';
 import { WebRequestCategory } from '../../category';
 
 const EMPTY_OUTPUTS = { 'URL': '', 'Origin': '', 'Pathname': '', 'Search': '' };

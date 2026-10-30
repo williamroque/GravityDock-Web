@@ -1,11 +1,11 @@
-import { ExecuteNode } from '@tracereactive/types';
-import type { InputDefinition, OutputDefinition, PropertyDefinition } from '@tracereactive/types';
-import type { TraceReactiveAPI } from '@tracereactive/types';
+import { ExecuteNode } from '@gravitydock/types';
+import type { InputDefinition, OutputDefinition, PropertyDefinition } from '@gravitydock/types';
+import type { GravityDockAPI } from '@gravitydock/types';
 import { WebRequestCategory } from '../../category';
 import { parseFetchResult, headersToRows, dataframeRowsToHeaders } from '../../utils/fetchResponse';
 import * as aq from 'arquero';
 
-declare const traceReactive: TraceReactiveAPI;
+declare const gravityDock: GravityDockAPI;
 
 const USER_AGENTS: Record<string, string> = {
     'Default': '',
@@ -104,7 +104,7 @@ export class FetchPageNode extends ExecuteNode {
         }
 
         try {
-            const raw = await traceReactive.net.fetch(url, fetchOptions);
+            const raw = await gravityDock.net.fetch(url, fetchOptions);
             const result = parseFetchResult(raw);
             const headerRows = headersToRows(result.headers);
 
