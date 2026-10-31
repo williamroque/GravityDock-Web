@@ -4,7 +4,7 @@
   "description": "Gravity Dock Web package",
   "main": "dist/index.js",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=browser --format=iife --global-name=__Gravity Dock_Package",
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=browser --format=iife --global-name=__GravityDock_Package",
     "build:gdpkg": "npm run build && node scripts/build-gdpkg.js",
     "dev": "npm run build -- --watch"
   },
