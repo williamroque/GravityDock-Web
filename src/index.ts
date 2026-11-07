@@ -8,6 +8,7 @@ import { HtmlTableToDataframeNode } from './nodes/structured/HtmlTableToDatafram
 import { SchemaScraperNode } from './nodes/structured/SchemaScraperNode';
 import { ExtractArticleNode } from './nodes/semantic/ExtractArticleNode';
 import { ExtractMetadataNode } from './nodes/semantic/ExtractMetadataNode';
+import { AsPdfNode } from './nodes/export/AsPdfNode';
 import type { GravityDockAPI } from '@gravitydock/types';
 
 declare const gravityDock: GravityDockAPI;
@@ -22,7 +23,8 @@ const nodes = [
     new HtmlTableToDataframeNode(),
     new SchemaScraperNode(),
     new ExtractArticleNode(),
-    new ExtractMetadataNode()
+    new ExtractMetadataNode(),
+    new AsPdfNode()
 ];
 
 const serializableNodes = nodes.map(n => ({

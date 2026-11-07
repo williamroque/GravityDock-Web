@@ -23,3 +23,9 @@ export const WebSemanticCategory: NodeCategory = {
     accent: 'sky-500',
     packageId: 'com.gravitydock.web'
 };
+
+export const WebExportCategory: NodeCategory = {
+    name: 'Export',
+    accent: 'indigo-500',
+    packageId: 'com.gravitydock.web'
+};

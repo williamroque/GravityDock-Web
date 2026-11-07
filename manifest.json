@@ -1,8 +1,12 @@
 {
   "id": "com.gravitydock.web",
   "name": "Web",
-  "version": "1.0.0",
-  "description": "Fetch web pages and extract structured data using CSS selectors and Cheerio.",
+  "version": "1.1.0",
+  "description": "Fetch web pages, extract structured data, and convert HTML to PDF.",
   "main": "dist/index.js",
-  "permissions": ["net:fetch"]
+  "permissions": [
+    "net:fetch",
+    "fs:read",
+    "fs:write"
+  ]
 }
